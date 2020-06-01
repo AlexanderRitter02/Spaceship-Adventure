@@ -1,0 +1,24 @@
+on:
+  issues:
+    types: [labeled]
+jobs:
+  Move_Labeled_Bug_On_Project_Board:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.LABEL_MOVER }}"
+        project-url: "https://github.com/AlexanderRitter02/Spaceship-Adventure/projects/1"
+        column-name: "Bugs"
+        label-name: "Fehler"
+        columns-to-ignore: "Wird bearbeitet,Done"
+  Move_Labeled_Feature_On_Project_Board:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        action-token: "${{ secrets.LABEL_MOVER }}"
+        project-url: "https://github.com/AlexanderRitter02/Spaceship-Adventure/projects/1"
+        column-name: "Features"
+        label-name: "Feature"
+        columns-to-ignore: "Wird bearbeitet,Done"
