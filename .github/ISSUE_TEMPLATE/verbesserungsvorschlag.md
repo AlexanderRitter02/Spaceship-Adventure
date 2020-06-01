@@ -2,7 +2,7 @@
 name: Verbesserung / Feature
 about: Schlage eine Idee oder neue Funktion vor
 title: Setze einen kurzen Titel
-labels: Verbesserung
+labels: Feature
 assignees: ''
 
 ---
